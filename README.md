@@ -31,4 +31,4 @@ pwd: adminCod3r123
 Para rol [usuario] se recomienda usar login with github
 ```
 
-📷 @solo.monti
+📷 @estenoesmonti

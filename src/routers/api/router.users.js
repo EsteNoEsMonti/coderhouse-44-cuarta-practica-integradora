@@ -6,6 +6,7 @@ import { soloRol } from "../../mid/authorization.js";
 import { postUsersForgot } from "../../controllers/api/users/controller.postusersforgot.js";
 import { postUsersRecover } from "../../controllers/api/users/controller.postusersrecover.js";
 import { getUsersAdm } from "../../controllers/api/users/controller.getuseradm.js";
+import { postUsuariosDocuments } from "../../controllers/api/users/controller.post.documents.js";
 
 export const usersRouter = Router();
 
@@ -14,3 +15,4 @@ usersRouter.get("/", authJwtApi, soloRol("super-admin"), getUsersController);
 usersRouter.post("/forgot", postUsersForgot);
 usersRouter.post("/recover", postUsersRecover);
 usersRouter.get("/admin/:uid", authJwtApi, soloRol("super-admin"), getUsersAdm);
+usersRouter.get("/:uid/documents", postUsuariosDocuments);

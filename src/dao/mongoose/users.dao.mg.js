@@ -15,6 +15,11 @@ export const SchemaUsers = new mongoose.Schema(
       default: "user",
     },
     cart: { type: String, require: true },
+    documents: [{
+      name: { type: String },
+      reference: { type: String }
+    }],
+    last_connection: { type: String }
   },
   { versionKey: false }
 );
